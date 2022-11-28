@@ -28,3 +28,31 @@ void ShowArray(string[] array)
 
     Console.WriteLine();
 }
+
+int CountStringsUpTo3symb(string[] array)
+{
+    int numUpTo3symb = 0;
+
+    for(int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        numUpTo3symb++;
+    }
+
+    return numUpTo3symb;
+}
+
+string[] Create3symbolArray(string[] array, int num)
+{
+    string[] newArray = new string[num];
+
+    for(int i = 0, j = 0; i < array.Length; i++, j++)
+    {
+        if (array[i].Length <= 3)
+            newArray[j] = array[i];
+        else
+            j--;
+    }
+
+    return newArray;
+}
