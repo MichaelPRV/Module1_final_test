@@ -56,3 +56,18 @@ string[] Create3symbolArray(string[] array, int num)
 
     return newArray;
 }
+
+string[] myArray = CreateArray();
+Console.WriteLine("Array of inputed strings: ");
+ShowArray(myArray);
+
+int numReqStr = CountStringsUpTo3symb(myArray);
+
+if (numReqStr == 0)
+    Console.WriteLine("There is no strings with required length");
+else
+{
+    string[] changedArray = Create3symbolArray(myArray, numReqStr);
+    Console.WriteLine("New array of strings with lenght less than or equal to 3 symbols: ");
+    ShowArray(changedArray);
+}
